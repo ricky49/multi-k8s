@@ -12,12 +12,12 @@ after_success:
   - docker build -t rsoto49/multi-nginx ./nginx
   - docker build -t rsoto49/multi-worker ./worker
   - docker build -t rsoto49/multi-server ./server
-   - docker build -t rsoto49/multi-server ./client
+  - docker build -t rsoto49/multi-server ./client
 
-#log in to the docker cli
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-#take images and push then too docker hub
-- docker push rsoto49/multi-nginx
-- docker push rsoto49/multi-worker
-- docker push rsoto49/multi-server
-- docker push rsoto49/multi-client
+  #log in to the docker cli
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  #take images and push then too docker hub
+  - docker push rsoto49/multi-nginx
+  - docker push rsoto49/multi-worker
+  - docker push rsoto49/multi-server
+  - docker push rsoto49/multi-client
